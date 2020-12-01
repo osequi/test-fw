@@ -38,6 +38,18 @@ Testing the Somenage framework
 
 #### `@theme`
 
+- https://kulshekhar.github.io/ts-jest/user/config/#paths-mapping
+
+```
+// jest.config.js
+moduleNameMapper: {
+  "^@theme": "<rootDir>/src/theme/",
+  "^@hooks": "<rootDir>/src/hooks/",
+  "^@components/(.*)$": "<rootDir>/src/components/$1",
+  "^@pages/(.*)$": "<rootDir>/src/pages/$1",
+},
+```
+
 #### `Home.test.tsx`
 
 ## React testing library
