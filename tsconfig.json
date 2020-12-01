@@ -15,7 +15,8 @@
     "jsx": "preserve",
     "baseUrl": "./src", // https://nextjs.org/docs/advanced-features/module-path-aliases
     "paths": {
-      "@theme": ["theme/"]
+      "@theme": ["theme/"],
+      "@pages/*": ["pages/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
