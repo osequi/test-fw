@@ -1,4 +1,10 @@
-Testing the Somenage framework
+# test-fw
+
+Testing the Somenage framework.
+
+Configuring all stuff to work together is not easy. At this momement there are 9 config files in 5 folders using half-a-dozen hacks to make the magic happen.
+
+What's interesting to see is `tsconfig.json` and all `jest.config.json` files in the root and subfolders.
 
 ## Create Next App
 

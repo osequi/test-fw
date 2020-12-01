@@ -22,4 +22,8 @@ module.exports = {
     "<rootDir>/src/hooks",
     "<rootDir>/src/theme",
   ],
+  /**
+   * Anything else goes into the `jest.config.json` files in every project's root folder.
+   * @see https://github.com/kulshekhar/ts-jest/issues/1648
+   */
 };
