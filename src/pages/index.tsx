@@ -1,11 +1,16 @@
 import React, { createContext } from "react";
 import { theme } from "@theme";
+import { Home } from "@components/Home";
 
 const ThemeContext = createContext(null);
 
-const Home = () => {
-  return <ThemeContext.Provider value={theme}>Home.</ThemeContext.Provider>;
+const HomePage = () => {
+  return (
+    <ThemeContext.Provider value={theme}>
+      <Home />
+    </ThemeContext.Provider>
+  );
 };
 
-export default Home;
+export default HomePage;
 export { ThemeContext };
