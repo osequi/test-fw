@@ -1,6 +1,5 @@
 module.exports = {
   preset: "ts-jest",
-
   /**
    * Load different test environment for JSX
    * @see https://github.com/nrwl/nx/issues/3776
@@ -18,7 +17,7 @@ module.exports = {
   moduleNameMapper: {
     /**
      * Enable @path imports for tests.
-     * https://kulshekhar.github.io/ts-jest/user/config/#paths-mapping
+     * @see https://kulshekhar.github.io/ts-jest/user/config/#paths-mapping
      */
     "^@theme": "<rootDir>/../theme/",
     "^@hooks": "<rootDir>/../hooks/",

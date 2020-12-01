@@ -68,6 +68,19 @@ As a workaround a `tsconfig.jest.json` has to be created, and a `globals` entry 
 See https://github.com/vercel/next.js/issues/8663
 
 ```js
+// jest.config.js, in root + project folders
+globals: {
+  /**
+   * A workaround for 'Next.js' to enable `"jsx": "react"`
+   * @see https://github.com/vercel/next.js/issues/8663
+   */
+  "ts-jest": {
+	tsconfig: "tsconfig.jest.json",
+  },
+},
+```
+
+```js
 // jest.config.js
 projects: [
   /**
