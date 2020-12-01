@@ -1,6 +1,15 @@
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
+  globals: {
+    /**
+     * A workaround for 'Next.js' to enable `"jsx": "react"`
+     * @see https://github.com/vercel/next.js/issues/8663
+     */
+    "ts-jest": {
+      tsconfig: "tsconfig.jest.json",
+    },
+  },
   /**
    * https://kulshekhar.github.io/ts-jest/user/config/#paths-mapping
    */

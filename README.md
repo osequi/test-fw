@@ -63,6 +63,10 @@ moduleNameMapper: {
 }
 ```
 
+However **THAT SETTING WILL BE ARBITRARILY OVERWRITTEN BY NEXT**.
+As a workaround a `tsconfig.jest.json` has to be created, and a `globals` entry added to all `jest.config.js` files.
+See https://github.com/vercel/next.js/issues/8663
+
 ```js
 // jest.config.js
 projects: [

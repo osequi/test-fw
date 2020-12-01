@@ -5,6 +5,15 @@ module.exports = {
    * @see https://github.com/nrwl/nx/issues/3776
    */
   testEnvironment: "jest-environment-jsdom-fifteen",
+  globals: {
+    /**
+     * A workaround for 'Next.js' to enable `"jsx": "react"`
+     * @see https://github.com/vercel/next.js/issues/8663
+     */
+    "ts-jest": {
+      tsconfig: "tsconfig.jest.json",
+    },
+  },
   moduleNameMapper: {
     /**
      * Enable @path imports for tests.
