@@ -10,4 +10,16 @@ module.exports = {
     "^@components/(.*)$": "<rootDir>/src/components/$1",
     "^@pages/(.*)$": "<rootDir>/src/pages/$1",
   },
+  projects: [
+    /**
+     * Configuring different test environments.
+     * For React components: 'jsdom'
+     * For hooks, theme: node
+     * @see https://stackoverflow.com/questions/41318115/testing-two-environments-with-jest
+     */
+    "<rootDir>/src/pages",
+    "<rootDir>/src/components",
+    "<rootDir>/src/hooks",
+    "<rootDir>/src/theme",
+  ],
 };
