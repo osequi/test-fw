@@ -122,6 +122,17 @@ module.exports = {
 
 - https://jestjs.io/docs/en/webpack.html
 
+```js
+// jest.config.js in all project folders (theme, hooks, components, pages)
+module.exports = {
+  moduleNameMapper: {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+      "../../jest.mock.file.js",
+    "\\.(css|less)$": "../../jest.mock.css.js",
+  },
+};
+```
+
 ## React testing library
 
 - Install is easy.
