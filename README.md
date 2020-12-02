@@ -162,6 +162,8 @@ module.exports = {
 
 ## MDX
 
+### Next.js
+
 - The official install guides are not working: https://mdxjs.com/getting-started/next, https://github.com/vercel/next.js/tree/canary/packages/next-mdx
 - No official TS support: https://github.com/microsoft/TypeScript/issues/36440
 - It seems the problem is the latest version.
@@ -174,4 +176,29 @@ module.exports = {
 // This is not working for now
 "@mdx-js/loader": "^1.6.22",
 "@next/mdx": "^10.0.3",
+```
+
+- Finally we have:
+
+```js
+// mdx.d.ts
+declare module "*.mdx" {
+  let MDXComponent: (props: any) => JSX.Element;
+  export default MDXComponent;
+}
+```
+
+```js
+// next.config.js
+const withMDX = require("@next/mdx")({
+  extension: /\.mdx?$/,
+});
+module.exports = withMDX({
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+});
+```
+
+```js
+// tsconfig.json
+"include": ["next-env.d.ts", "mdx.d.ts", "**/*.ts", "**/*.tsx"],
 ```
