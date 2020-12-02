@@ -159,3 +159,19 @@ module.exports = {
 ## React testing library
 
 - Install is easy.
+
+## MDX
+
+- The official install guides are not working: https://mdxjs.com/getting-started/next, https://github.com/vercel/next.js/tree/canary/packages/next-mdx
+- No official TS support: https://github.com/microsoft/TypeScript/issues/36440
+- It seems the problem is the latest version.
+
+```js
+// This works
+"@mdx-js/loader": "1.6.21",
+"@next/mdx": "10.0.2",
+
+// This is not working for now
+"@mdx-js/loader": "^1.6.22",
+"@next/mdx": "^10.0.3",
+```
