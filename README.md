@@ -202,3 +202,14 @@ module.exports = withMDX({
 // tsconfig.json
 "include": ["next-env.d.ts", "mdx.d.ts", "**/*.ts", "**/*.tsx"],
 ```
+
+### Jest
+
+- Simply exclude `.mdx` files as other files like `.jpg` from being tested.
+
+```js
+// in every jest.config.js file in project folders.
+"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|mdx)$":
+  "<rootDir>/../../jest.mock.file.js",
+"\\.(css|less)$": "<rootDir>/../../jest.mock.css.js",
+```
